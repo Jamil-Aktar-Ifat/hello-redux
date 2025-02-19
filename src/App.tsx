@@ -9,25 +9,34 @@ function App() {
     dispatch(increment(amount));
   };
 
-  const handleDecrement = () => {
-    dispatch(decrement());
+  const handleDecrement = (amount: number) => {
+    dispatch(decrement(amount));
   };
 
   return (
     <>
       <div>
         <div className="text-center mt-20 space-y-4">
-          <h2 className="text-2xl underline">Counter with Redux</h2>
-          <button className="btn" onClick={() => handleIncrement(1)}>
-            Increment
-          </button>
-          <button className="btn" onClick={() => handleIncrement(5)}>
-            Increment by 5
-          </button>
-          <div>{count}</div>
-          <button className="btn" onClick={handleDecrement}>
-            Decrement
-          </button>
+          <h2 className="text-2xl ">
+            Counter with Redux: <span className="text-blue-400"> {count}</span>
+          </h2>
+          <div className="flex gap-3 justify-center">
+            <button className="btn" onClick={() => handleIncrement(1)}>
+              Increment
+            </button>
+            <button className="btn" onClick={() => handleIncrement(5)}>
+              Increment by 5
+            </button>
+          </div>
+
+          <div className="flex justify-center gap-3">
+            <button className="btn" onClick={() => handleDecrement(3)}>
+              Decrement by 3
+            </button>
+            <button className="btn" onClick={() => handleDecrement(1)}>
+              Decrement
+            </button>
+          </div>
         </div>
       </div>
     </>
