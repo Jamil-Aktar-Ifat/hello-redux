@@ -1,3 +1,4 @@
+import { Button } from "./components/ui/button";
 import { decrement, increment } from "./redux/features/counter/counterSlice";
 import { useAppDispatch, useAppSelector } from "./redux/hook";
 
@@ -21,21 +22,21 @@ function App() {
             Counter with Redux: <span className="text-blue-400"> {count}</span>
           </h2>
           <div className="flex gap-3 justify-center">
-            <button className="btn" onClick={() => handleIncrement(1)}>
+            <Button onClick={() => handleIncrement(1)}>
               Increment
-            </button>
-            <button className="btn" onClick={() => handleIncrement(5)}>
+            </Button>
+            <Button onClick={() => handleIncrement(5)}>
               Increment by 5
-            </button>
+            </Button>
           </div>
 
           <div className="flex justify-center gap-3">
-            <button className="btn" onClick={() => handleDecrement(3)}>
+            <Button onClick={() => handleDecrement(3)}>
               Decrement by 3
-            </button>
-            <button className="btn" onClick={() => handleDecrement(1)}>
+            </Button>
+            <Button onClick={() => handleDecrement(1)}>
               Decrement
-            </button>
+            </Button>
           </div>
         </div>
       </div>
