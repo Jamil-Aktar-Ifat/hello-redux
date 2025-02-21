@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo";
 
 export default function Navbar() {
@@ -7,6 +8,8 @@ export default function Navbar() {
         <Logo />
         <span className="font-bold ml-2">Task</span> Master
       </div>
+      <Link to="/">Tasks</Link>
+      <Link to="/users">Users</Link>
     </nav>
   );
 }

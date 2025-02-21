@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import { Button } from "./components/ui/button";
 import { decrement, increment } from "./redux/features/counter/counterSlice";
@@ -19,7 +20,7 @@ function App() {
     <>
       <div>
         <Navbar></Navbar>
-        <div className="text-center mt-20 space-y-4">
+        {/* <div className="text-center mt-20 space-y-4">
           <h2 className="text-2xl ">
             Counter with Redux: <span className="text-blue-400"> {count}</span>
           </h2>
@@ -32,7 +33,8 @@ function App() {
             <Button onClick={() => handleDecrement(3)}>Decrement by 3</Button>
             <Button onClick={() => handleDecrement(1)}>Decrement</Button>
           </div>
-        </div>
+        </div> */}
+        <Outlet></Outlet>
       </div>
     </>
   );
