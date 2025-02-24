@@ -21,6 +21,7 @@ export default function TaskCard({ task }: IProps) {
             })}
           ></div>
           <h1>{task.title}</h1>
+          
         </div>
         <div className="flex gap-3 items-center">
           <Button variant="link" className="p-0 text-red-600">
