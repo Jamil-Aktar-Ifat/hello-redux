@@ -6,7 +6,7 @@ import { useAppSelector } from "../redux/hook";
 export default function Tasks() {
   const tasks = useAppSelector(selectTasks);
   // const filter = useAppSelector(selectFilter);
-  console.log(tasks);
+  // console.log(tasks);
   // console.log(filter);
 
   return (
@@ -17,7 +17,7 @@ export default function Tasks() {
       </div>
       <div className="space-y-5 mt-5">
         {tasks.map((task) => (
-          <TaskCard task={task}></TaskCard>
+          <TaskCard task={task} key={task.id}></TaskCard>
         ))}
       </div>
     </div>
